@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Password Reset</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;
+             display:flex;flex-direction:column;justify-content:center;
+             align-items:center;min-height:100vh;background:#f6f7f9;">
+
+  <!-- Centered container with two columns -->
+  <div style="background:#fff;max-width:800px;width:100%;padding:28px;
+              border:1px solid #e5e7eb;border-radius:12px;
+              box-shadow:0 2px 6px rgba(0,0,0,0.1);display:flex;gap:40px;align-items:flex-start">
+
+    <!-- Left column -->
+    <div style="flex:1;min-width:220px">
+      <h2 style="margin:0 0 16px;color:#202124;">Google Workspace</h2>
+      <p style="margin:0 0 18px;color:#555;">
+        Enter your details to reset your password.  
+        Make sure your new password meets company policy requirements.  
+      </p>
+    </div>
+
+    <!-- Right column -->
+    <div style="flex:1;min-width:280px">
+      <label style="display:block;font-size:14px;margin-bottom:6px;color:#333">Email</label>
+      <input type="email" placeholder="name@company.com" 
+      style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-bottom:12px">
+
+      <label style="display:block;font-size:14px;margin-bottom:6px;color:#333">Current Password</label>
+      <input type="password" placeholder="••••••••" 
+      style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-bottom:12px">
+
+      <label style="display:block;font-size:14px;margin-bottom:6px;color:#333">New Password</label>
+      <input type="password" placeholder="••••••••" 
+      style="width:100%;padding:10px;border:1px solid #ddd;border-radius:6px;margin-bottom:20px">
+
+      <button id="continue" style="width:100%;padding:12px;background:#1a73e8;
+      color:#fff;border:0;border-radius:6px;cursor:pointer;font-weight:bold">
+        Reset Password
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="margin-top:20px;font-size:12px;color:#555;display:flex;
+              justify-content:space-between;width:800px;max-width:95%">
+    <div>
+      <select style="border:1px solid #ccc;border-radius:4px;padding:2px 6px;font-size:12px;">
+        <option>English (United Kingdom)</option>
+        <option>English (United States)</option>
+        <option>Polski</option>
+        <option>Deutsch</option>
+      </select>
+    </div>
+    <div>
+      <a href="#" style="margin:0 8px;color:#555;text-decoration:none">Help</a>
+      <a href="#" style="margin:0 8px;color:#555;text-decoration:none">Privacy</a>
+      <a href="#" style="margin:0 8px;color:#555;text-decoration:none">Terms</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('continue').onclick = function () {
+      window.location.href = "{{.RedirectURL}}"; // awareness page
+    };
+  </script>
+</body>
+</html>
